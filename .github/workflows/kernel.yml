@@ -45,7 +45,7 @@ jobs:
       contents: write
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       
     - name: Packages
       run: |
@@ -105,7 +105,7 @@ jobs:
 
     - name: Upload to Release
       if: env.KERNEL_IS_OK == 'true'
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       with:
         files: |
           android/kernel/out/arch/arm64/boot/${{ inputs.KERNEL_IMAGE_NAME }}
