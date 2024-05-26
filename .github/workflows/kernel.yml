@@ -69,7 +69,6 @@ jobs:
 
     - name: Build Kernel
       run: |
-        PATH="${GITHUB_WORKSPACE}/android/toolchains/proton-clang/bin:/bin:$PATH"
         cd android/kernel
         export PATH="$(pwd)/toolchains/proton-clang/bin:$PATH"
         export ARCH=arm64
